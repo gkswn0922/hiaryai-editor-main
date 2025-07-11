@@ -33,10 +33,19 @@ export const useContentItemActions = (
       .run()
   }
 
-  const copyNodeToClipboard = () => {
+  const copyNodeToClipboard = async () => {
     editor.chain().setMeta('hideDragHandle', true).setNodeSelection(currentNodePos.value).run()
-
-    document.execCommand('copy')
+    try {
+      await navigator.clipboard.writeText(editor.view.dom.innerText)
+    } catch (err) {
+      // Fallback for older browsers
+      const textArea = document.createElement('textarea')
+      textArea.value = editor.view.dom.innerText
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textArea)
+    }
   }
 
   const deleteNode = () => {
@@ -44,30 +53,11 @@ export const useContentItemActions = (
   }
 
   const handleAdd = () => {
-    if (currentNodePos.value !== -1) {
-      const currentNodeSize = currentNode.value?.nodeSize || 0
-      const insertPos = currentNodePos.value + currentNodeSize
-          const currentNodeIsEmptyParagraph =
-      currentNode.value?.type.name === 'paragraph' && currentNode.value?.content?.size === 0
-      const focusPos = currentNodeIsEmptyParagraph ? currentNodePos.value + 2 : insertPos + 2
+    // 에디터의 모든 내용을 지우기 전에 확인
+    const confirmed = window.confirm('정말로 모든 내용을 지우시겠습니까? 이 작업은 되돌릴 수 없습니다.')
 
-      editor
-        .chain()
-        .command(({ dispatch, tr, state }) => {
-          if (dispatch) {
-            if (currentNodeIsEmptyParagraph) {
-              tr.insertText('/', currentNodePos.value, currentNodePos.value + 1)
-            } else {
-              tr.insert(insertPos, state.schema.nodes.paragraph.create(null, [state.schema.text('/')]))
-            }
-
-            return dispatch(tr)
-          }
-
-          return true
-        })
-        .focus(focusPos)
-        .run()
+    if (confirmed) {
+      editor.chain().clearContent().focus().run()
     }
   }
 

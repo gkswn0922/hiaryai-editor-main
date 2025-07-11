@@ -28,4 +28,4 @@ const toolbarClassName = computed(() =>
     attrs.class as string,
   ),
 )
-</script> 
+</script>

@@ -18,7 +18,7 @@
   </div>
   <teleport to="body">
     <div v-if="aiState.isAiLoading.value" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
-      <Loader label="AI is now doing its job." />
+      <Loader label="AI가 작업 중입니다." />
     </div>
   </teleport>
 </template>
@@ -28,6 +28,7 @@ import { ref, provide, computed, defineExpose } from 'vue'
 import { EditorContent } from '@tiptap/vue-3'
 import { useBlockEditor } from '@/composables/useBlockEditor'
 import { useAIState } from '@/composables/useAIState'
+import { useKeyboardShortcuts } from '@/composables/useKeyboardShortcuts'
 import Sidebar from '@/components/Sidebar/Sidebar.vue'
 import EditorHeader from './components/EditorHeader.vue'
 import ContentItemMenu from '@/components/menus/ContentItemMenu/ContentItemMenu.vue'
@@ -45,6 +46,9 @@ const editorRef = ref()
 const { editor, users, characterCount, collabState, leftSidebar } = useBlockEditor(props)
 
 const displayedUsers = computed(() => users.value.slice(0, 3))
+
+// 키보드 단축키 설정
+useKeyboardShortcuts(editor.value || null)
 
 
 provide('aiState', aiState)

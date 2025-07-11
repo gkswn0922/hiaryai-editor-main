@@ -1,7 +1,7 @@
 <template>
   <Surface
     ref="scrollContainer"
-    class="text-black max-h-[min(80vh,24rem)] overflow-auto flex-wrap mb-8 p-1"
+    class="text-black max-h-[min(80vh,24rem)] overflow-auto flex-wrap mb-8 p-1 min-w-[400px]"
   >
     <div v-if="items.length > 0">
       <template v-for="(group, groupIndex) in items" :key="group.title">
@@ -27,7 +27,7 @@
           :title="command.label"
           :description="command.description"
           :icon="command.iconName"
-          @click="createCommandClickHandler(groupIndex, commandIndex)"
+          @click="console.log('Button clicked!', groupIndex, commandIndex); selectItem(groupIndex, commandIndex)"
         />
       </template>
     </div>
@@ -55,7 +55,17 @@ watch(() => props.items, () => {
 
 const selectItem = (groupIndex: number, commandIndex: number) => {
   const command = props.items[groupIndex].commands[commandIndex]
-  emit('command', command)
+  console.log('Selected command:', command);
+  console.log('Command action:', command.action);
+
+  // props.command 함수 호출 (Suggestion 시스템에서 전달받은 함수)
+  if (props.command) {
+    console.log('Calling props.command with:', command);
+    props.command(command)
+  } else {
+    console.log('props.command is not available, using emit');
+    emit('command', command)
+  }
 }
 
 const onKeyDown = ({ event }: { event: KeyboardEvent }) => {
@@ -139,13 +149,9 @@ onUpdated(() => {
     scrollToActiveItem()
 })
 
-const createCommandClickHandler = (groupIndex: number, commandIndex: number) => {
-  return () => {
-    selectItem(groupIndex, commandIndex)
-  }
-}
+
 
 defineExpose({
   onKeyDown,
 })
-</script> 
+</script>

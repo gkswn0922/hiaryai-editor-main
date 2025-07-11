@@ -57,7 +57,7 @@ const isNodeSelectorVisible = ref(false);
 
 const items = [
   {
-    name: 'Text',
+    name: '텍스트',
     icon: Text,
     command: () =>
       props.editor.chain().focus().toggleNode('paragraph', 'paragraph').run(),
@@ -67,25 +67,25 @@ const items = [
       !props.editor.isActive('orderedList'),
   },
   {
-    name: 'Heading 1',
+    name: '제목 1',
     icon: Heading1,
     command: () => props.editor.chain().focus().toggleHeading({ level: 1 }).run(),
     isActive: () => props.editor.isActive('heading', { level: 1 }),
   },
   {
-    name: 'Heading 2',
+    name: '제목 2',
     icon: Heading2,
     command: () => props.editor.chain().focus().toggleHeading({ level: 2 }).run(),
     isActive: () => props.editor.isActive('heading', { level: 2 }),
   },
   {
-    name: 'Heading 3',
+    name: '제목 3',
     icon: Heading3,
     command: () => props.editor.chain().focus().toggleHeading({ level: 3 }).run(),
     isActive: () => props.editor.isActive('heading', { level: 3 }),
   },
   {
-    name: 'Quote',
+    name: '인용구',
     icon: TextQuote,
     command: () =>
       props.editor
@@ -96,19 +96,19 @@ const items = [
     isActive: () => props.editor.isActive('blockquote'),
   },
   {
-    name: 'Code',
+    name: '코드',
     icon: Code,
     command: () => props.editor.chain().focus().toggleCodeBlock().run(),
     isActive: () => props.editor.isActive('codeBlock'),
   },
   {
-    name: 'Bullet List',
+    name: '글머리 기호 목록',
     icon: ListOrdered,
     command: () => props.editor.chain().focus().toggleBulletList().run(),
     isActive: () => props.editor.isActive('bulletList'),
   },
   {
-    name: 'Numbered List',
+    name: '번호 목록',
     icon: ListOrdered,
     command: () => props.editor.chain().focus().toggleOrderedList().run(),
     isActive: () => props.editor.isActive('orderedList'),
@@ -116,7 +116,7 @@ const items = [
 ];
 
 const activeItem = computed(
-  () => items.filter((item) => item.isActive()).pop() ?? { name: 'Multiple' }
+  () => items.filter((item) => item.isActive()).pop() ?? { name: '여러 개' }
 );
 
 const onToggle = () => {
@@ -127,4 +127,4 @@ const onItemClick = (item: (typeof items)[0]) => {
   item.command();
   isNodeSelectorVisible.value = false;
 };
-</script> 
+</script>

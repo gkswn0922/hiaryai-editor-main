@@ -14,6 +14,7 @@ import { cn } from '@/lib/utils'
 import type { Editor } from '@tiptap/vue-3'
 import TableOfContents from '@/components/TableOfContents/TableOfContents.vue'
 
+
 type SidebarProps = {
   editor: Editor
   isOpen?: boolean
@@ -39,4 +40,4 @@ const windowClassName = computed(() =>
     props.isOpen && 'w-80 border-r border-r-neutral-200 dark:border-r-neutral-800',
   ),
 )
-</script> 
+</script>

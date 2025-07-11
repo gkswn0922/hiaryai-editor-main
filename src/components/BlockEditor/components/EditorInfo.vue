@@ -2,10 +2,10 @@
   <div class="flex items-center">
     <div class="flex flex-col justify-center pr-4 mr-4 text-right border-r border-neutral-200 dark:border-neutral-800">
       <div class="text-xs font-semibold text-neutral-500 dark:text-neutral-400">
-        {{ words }} {{ words === 1 ? 'word' : 'words' }}
+        {{ words }} 단어
       </div>
       <div class="text-xs font-semibold text-neutral-500 dark:text-neutral-400">
-        {{ characters }} {{ characters === 1 ? 'character' : 'characters' }}
+        {{ characters }} 글자
       </div>
     </div>
     <div class="flex items-center gap-2 mr-2">
@@ -58,4 +58,4 @@ export type EditorInfoProps = {
 }
 
 defineProps<EditorInfoProps>()
-</script> 
+</script>

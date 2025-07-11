@@ -12,10 +12,14 @@ const props = defineProps<Props>()
 
 const onUpload = (url: string) => {
   if (url) {
+    const pos = props.getPos()
     props.editor
       .chain()
-      .setImageBlock({ src: url })
-      .deleteRange({ from: props.getPos(), to: props.getPos() })
+      .deleteRange({ from: pos, to: pos + 1 })
+      .insertContentAt(pos, {
+        type: 'imageBlock',
+        attrs: { src: url }
+      })
       .focus()
       .run()
   }
@@ -28,4 +32,4 @@ const onUpload = (url: string) => {
       <ImageUploader :on-upload="onUpload" />
     </div>
   </NodeViewWrapper>
-</template> 
+</template>

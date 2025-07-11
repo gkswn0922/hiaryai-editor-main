@@ -3,3 +3,12 @@ description:
 globs:
 alwaysApply: false
 ---
+# TableOfContents Component Rule
+
+The [TableOfContents.vue](mdc:src/components/TableOfContents/TableOfContents.vue) component follows shadcn-vue conventions:
+
+- It is a single file component (SFC) in the `src/components/TableOfContents` directory.
+- Used for displaying a document outline or navigation.
+- Uses Tailwind CSS for styling and utility classes.
+
+For table of contents best practices, see the [shadcn-vue Tabs documentation](https://www.shadcn-vue.com/docs/components/tabs) as a reference for navigation components.

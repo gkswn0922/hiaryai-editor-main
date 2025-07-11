@@ -16,7 +16,7 @@ export const initialContent = {
         },
         {
           type: 'text',
-          text: ' Vue.js + Tiptap Block Editor Template',
+          text: ' Vue.js + Tiptap 블록 에디터 템플릿',
         },
       ],
     },
@@ -29,7 +29,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'Welcome to our Vue.js Block Editor Template built on top of ',
+          text: '안녕하세요! ',
         },
         {
           type: 'text',
@@ -65,7 +65,7 @@ export const initialContent = {
         },
         {
           type: 'text',
-          text: ' and ',
+          text: ', ',
         },
         {
           type: 'text',
@@ -83,7 +83,7 @@ export const initialContent = {
         },
         {
           type: 'text',
-          text: '. This project can be a good starting point for your own implementation of a block editor.',
+          text: '로 구축된 Vue.js 블록 에디터 템플릿에 오신 것을 환영합니다. 이 프로젝트는 블록 에디터를 직접 구현할 때 좋은 시작점이 될 수 있습니다.',
         },
       ],
     },
@@ -108,7 +108,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'This editor includes features like:',
+          text: '이 에디터는 다음과 같은 기능들을 포함합니다:',
         },
       ],
     },
@@ -127,7 +127,7 @@ export const initialContent = {
               content: [
                 {
                   type: 'text',
-                  text: 'A DragHandle including a DragHandle menu',
+                  text: '드래그 핸들 메뉴를 포함한 드래그 핸들',
                 },
               ],
             },
@@ -145,7 +145,7 @@ export const initialContent = {
               content: [
                 {
                   type: 'text',
-                  text: 'A Slash menu that can be triggered via typing a ',
+                  text: '빈 문단에 ',
                 },
                 {
                   type: 'text',
@@ -158,7 +158,7 @@ export const initialContent = {
                 },
                 {
                   type: 'text',
-                  text: ' into an empty paragraph or by using the ',
+                  text: '를 입력하거나 드래그 핸들 옆의 ',
                 },
                 {
                   type: 'text',
@@ -167,11 +167,11 @@ export const initialContent = {
                       type: 'bold',
                     },
                   ],
-                  text: '+ Button',
+                  text: '+ 버튼',
                 },
                 {
                   type: 'text',
-                  text: ' next to the drag handle',
+                  text: '을 사용해서 실행할 수 있는 슬래시 메뉴',
                 },
               ],
             },
@@ -189,7 +189,7 @@ export const initialContent = {
               content: [
                 {
                   type: 'text',
-                  text: 'A TextFormatting menu that allows you to change the ',
+                  text: '다음을 변경할 수 있는 텍스트 서식 메뉴: ',
                 },
                 {
                   type: 'text',
@@ -203,7 +203,7 @@ export const initialContent = {
                       },
                     },
                   ],
-                  text: 'font size',
+                  text: '글꼴 크기',
                 },
                 {
                   type: 'text',
@@ -216,7 +216,7 @@ export const initialContent = {
                       type: 'bold',
                     },
                   ],
-                  text: 'font weight',
+                  text: '글꼴 굵기',
                 },
                 {
                   type: 'text',
@@ -234,7 +234,7 @@ export const initialContent = {
                       },
                     },
                   ],
-                  text: 'font family',
+                  text: '글꼴 종류',
                 },
                 {
                   type: 'text',
@@ -252,11 +252,11 @@ export const initialContent = {
                       },
                     },
                   ],
-                  text: 'text color',
+                  text: '텍스트 색상',
                 },
                 {
                   type: 'text',
-                  text: ' and ',
+                  text: ' 및 ',
                 },
                 {
                   type: 'text',
@@ -268,7 +268,7 @@ export const initialContent = {
                       },
                     },
                   ],
-                  text: 'highlighting',
+                  text: '하이라이트',
                 },
                 {
                   type: 'text',
@@ -290,7 +290,7 @@ export const initialContent = {
               content: [
                 {
                   type: 'text',
-                  text: 'A Table of Contents that automatically generates a list of all headlines.',
+                  text: '모든 제목의 목록을 자동으로 생성하는 목차.',
                 },
               ],
             },
@@ -307,7 +307,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'Image Upload',
+          text: '이미지 업로드',
         },
       ],
     },
@@ -319,7 +319,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'This template has an image upload feature. You can simply drag and drop or copy/paste an image into the editor. It will be uploaded to a server and inserted into the document. The image is a block node, so you can also add a caption to it.',
+          text: '이 템플릿은 이미지 업로드 기능을 제공합니다. 에디터에 이미지를 간단히 드래그 앤 드롭하거나 복사/붙여넣기 할 수 있습니다. 이미지는 서버에 업로드되어 문서에 삽입됩니다. 이미지는 블록 노드이므로 캡션을 추가할 수도 있습니다.',
         },
       ],
     },
@@ -338,7 +338,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'AI Tools',
+          text: 'AI 도구',
         },
       ],
     },
@@ -350,7 +350,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: "We've also integrated our OpenAI extension, which allows you to use AI to improve your writing. You can use it to fix spelling and grammar, simplify your language, or even translate your text into another language. The AI tools are available in the text formatting menu.",
+          text: '우리는 또한 글쓰기를 개선하기 위해 AI를 사용할 수 있는 OpenAI 확장을 통합했습니다. 맞춤법과 문법을 수정하거나, 언어를 단순화하거나, 심지어 텍스트를 다른 언어로 번역하는 데 사용할 수 있습니다. AI 도구는 텍스트 서식 메뉴에서 사용할 수 있습니다.',
         },
       ],
     },
@@ -366,7 +366,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'Real-time collaboration',
+          text: '실시간 협업',
         },
       ],
     },
@@ -378,7 +378,7 @@ export const initialContent = {
       content: [
         {
           type: 'text',
-          text: 'This template also includes a real-time collaboration feature. You can share a link to this document with others and edit it together. The changes will be synced in real-time. Try it out by opening this page in another tab!',
+          text: '이 템플릿은 실시간 협업 기능도 포함하고 있습니다. 이 문서의 링크를 다른 사람들과 공유하고 함께 편집할 수 있습니다. 변경 사항은 실시간으로 동기화됩니다. 다른 탭에서 이 페이지를 열어서 시도해보세요!',
         },
       ],
     },

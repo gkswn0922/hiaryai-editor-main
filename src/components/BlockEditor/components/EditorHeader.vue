@@ -3,7 +3,7 @@
     <div class="flex flex-row gap-x-1.5 items-center">
       <div class="flex items-center gap-x-1.5">
         <ToolbarButton
-          :tooltip="isSidebarOpen ? 'Close sidebar' : 'Open sidebar'"
+          :tooltip="isSidebarOpen ? '사이드바 닫기' : '사이드바 열기'"
           @click="emit('toggleSidebar')"
           :is-active="isSidebarOpen"
           :class="isSidebarOpen ? 'bg-transparent' : ''"
@@ -33,4 +33,4 @@ export type EditorHeaderProps = {
 
 defineProps<EditorHeaderProps>()
 const emit = defineEmits(['toggleSidebar'])
-</script> 
+</script>

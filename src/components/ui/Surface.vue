@@ -16,7 +16,7 @@ export interface SurfaceProps {
 
 const props = withDefaults(defineProps<SurfaceProps>(), {
   withShadow: true,
-  withBorder: true,
+  withBorder: false,
 })
 
 const surfaceClass = computed(() =>
@@ -27,4 +27,4 @@ const surfaceClass = computed(() =>
     props.class,
   ),
 )
-</script> 
+</script>

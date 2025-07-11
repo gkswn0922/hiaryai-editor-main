@@ -8,13 +8,12 @@ export const useImageUploader = ({ onUpload }: { onUpload: (url: string) => void
   const uploadFile = async (file: File) => {
     loading.value = true
     try {
-      // Note: API.uploadImage is a mock and does not use the file argument.
-      // In a real application, you would pass the file to the API.
-      const url = await API.uploadImage()
-
+      // Pass the actual file to the API
+      const url = await API.uploadImage(file)
       onUpload(url)
+      toast.success('이미지가 성공적으로 업로드되었습니다!')
     } catch (errPayload: any) {
-      const error = errPayload?.response?.data?.error || 'Something went wrong'
+      const error = errPayload?.response?.data?.error || '이미지 업로드에 실패했습니다'
       toast.error(error)
     }
     loading.value = false
@@ -33,12 +32,12 @@ export const useImageUpload = (): { ref: Ref<HTMLInputElement | null>, handleUpl
   return { ref: fileInput, handleUploadClick }
 }
 
-export const useImageDropzone = ({ uploader }: { uploader: (file: File) => void }): { 
-  isDragging: Ref<boolean>, 
-  draggedInside: Ref<boolean>, 
-  onDragEnter: () => void, 
-  onDragLeave: () => void, 
-  onDrop: (e: DragEvent) => void 
+export const useImageDropzone = ({ uploader }: { uploader: (file: File) => void }): {
+  isDragging: Ref<boolean>,
+  draggedInside: Ref<boolean>,
+  onDragEnter: () => void,
+  onDragLeave: () => void,
+  onDrop: (e: DragEvent) => void
 } => {
   const isDragging = ref<boolean>(false)
   const draggedInside = ref<boolean>(false)
@@ -102,4 +101,4 @@ export const useImageDropzone = ({ uploader }: { uploader: (file: File) => void 
   }
 
   return { isDragging, draggedInside, onDragEnter, onDragLeave, onDrop }
-} 
+}

@@ -3,3 +3,14 @@ description:
 globs:
 alwaysApply: false
 ---
+# ToolbarButton Component Rule
+
+The [ToolbarButton.vue](mdc:src/components/ui/ToolbarButton.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for toolbar actions, typically as a button with an icon or label.
+- Accepts `tooltip`, `isActive`, `disabled`, `size`, `onClick`, and `class` props.
+- Uses [Button.vue](mdc:src/components/ui/Button/Button.vue) for button rendering and [Tooltip.vue](mdc:src/components/ui/Tooltip.vue) for tooltips.
+- Uses Tailwind CSS for styling and utility classes.
+
+For toolbar best practices, see the [shadcn-vue Toolbar documentation](https://www.shadcn-vue.com/docs/components/toolbar) as a reference.

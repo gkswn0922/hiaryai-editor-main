@@ -3,3 +3,14 @@ description:
 globs:
 alwaysApply: false
 ---
+# PanelHeadline Component Rule
+
+The [PanelHeadline.vue](mdc:src/components/ui/Panel/PanelHeadline.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui/Panel`.
+- Used for displaying a styled headline or title within a panel.
+- Accepts `asChild` and `class` props.
+- Uses Tailwind CSS for styling and utility classes.
+- Uses `Primitive` from radix-vue for polymorphic rendering.
+
+For header best practices, see the [shadcn-vue Card documentation](https://www.shadcn-vue.com/docs/components/card) as a reference.

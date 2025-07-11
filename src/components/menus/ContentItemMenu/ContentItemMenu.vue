@@ -1,6 +1,6 @@
 <template>
   <div class="flex items-center gap-0.5">
-    <ToolbarButton tooltip="Add a new block" @click="actions.handleAdd">
+    <ToolbarButton tooltip="Clear all content" @click="actions.handleAdd">
       <Icon name="Plus" />
     </ToolbarButton>
     <PopoverRoot :open="menuOpen" @update:open="onOpenChange">

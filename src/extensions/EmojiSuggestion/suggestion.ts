@@ -6,14 +6,19 @@ import tippy, { Instance } from 'tippy.js'
 import EmojiList from './components/EmojiList.vue'
 
 export const emojiSuggestion = {
-  items: ({ editor, query }: { editor: Editor; query: string }) =>
-    editor.storage.emoji.emojis
+  items: ({ editor, query }: { editor: Editor; query: string }) => {
+    if (!editor.storage.emoji?.emojis) {
+      return []
+    }
+
+    return editor.storage.emoji.emojis
       .filter(
         ({ shortcodes, tags }: { shortcodes: string[]; tags: string[] }) =>
-          shortcodes.find((shortcode: string) => shortcode.startsWith(query.toLowerCase())) ||
-          tags.find((tag: string) => tag.startsWith(query.toLowerCase())),
+          shortcodes?.find((shortcode: string) => shortcode.startsWith(query.toLowerCase())) ||
+          tags?.find((tag: string) => tag.startsWith(query.toLowerCase())),
       )
-      .slice(0, 250),
+      .slice(0, 250)
+  },
 
   allowSpaces: false,
 

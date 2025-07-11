@@ -33,7 +33,6 @@ const provider = hasCollab
 const logEditorContent = () => {
   if (blockEditorRef.value?.editor) {
     const JSONContent = blockEditorRef.value.editor.getJSON()
-
     console.log('JSON:', JSONContent)
   }
 }
@@ -45,7 +44,7 @@ watch(() => blockEditorRef.value?.editor, (newEditor) => {
     newEditor.on('update', () => {
       logEditorContent()
     })
-    
+
     // 초기 내용 출력
     logEditorContent()
   }
@@ -54,11 +53,11 @@ watch(() => blockEditorRef.value?.editor, (newEditor) => {
 </script>
 
 <template>
-  <BlockEditor 
+  <BlockEditor
     ref="blockEditorRef"
-    :ydoc="ydoc" 
-    :provider="provider" 
-    :has-collab="hasCollab" 
-    ai-token="" 
+    :ydoc="ydoc"
+    :provider="provider"
+    :has-collab="hasCollab"
+    ai-token=""
   />
-</template> 
+</template>

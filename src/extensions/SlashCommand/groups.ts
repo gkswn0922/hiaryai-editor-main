@@ -8,9 +8,9 @@ export const GROUPS: Group[] = [
       {
         id: 'continueWriting',
         name: 'continueWriting',
-        label: 'Continue writing',
+        label: '계속 작성하기',
         iconName: 'PenLine',
-        description: 'Use AI to expand your text',
+        description: 'AI를 사용해서 텍스트를 확장합니다',
         action: editor => {
           editor.chain().focus().continueWriting().run()
         },
@@ -18,18 +18,18 @@ export const GROUPS: Group[] = [
       {
         id: 'aiWriter',
         name: 'aiWriter',
-        label: 'AI Writer',
+        label: 'AI 작성도구',
         iconName: 'Sparkles',
-        description: 'Let AI finish your thoughts',
+        description: 'AI가 당신의 생각을 완성해드립니다',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => editor.chain().focus().setAiWriter().run(),
       },
       {
         id: 'aiImage',
         name: 'aiImage',
-        label: 'AI Image',
+        label: 'AI 이미지',
         iconName: 'Sparkles',
-        description: 'Generate an image from text',
+        description: '텍스트로부터 이미지를 생성합니다',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => editor.chain().focus().setAiImage().run(),
       },
@@ -37,14 +37,14 @@ export const GROUPS: Group[] = [
   },
   {
     name: 'format',
-    title: 'Format',
+    title: '서식',
     commands: [
       {
         id: 'heading1',
         name: 'heading1',
-        label: 'Heading 1',
+        label: '제목 1',
         iconName: 'Heading1',
-        description: 'High priority section title',
+        description: '높은 우선순위 섹션 제목',
         aliases: ['h1'],
         action: editor => {
           editor.chain().focus().setHeading({ level: 1 }).run()
@@ -53,9 +53,9 @@ export const GROUPS: Group[] = [
       {
         id: 'heading2',
         name: 'heading2',
-        label: 'Heading 2',
+        label: '제목 2',
         iconName: 'Heading2',
-        description: 'Medium priority section title',
+        description: '중간 우선순위 섹션 제목',
         aliases: ['h2'],
         action: editor => {
           editor.chain().focus().setHeading({ level: 2 }).run()
@@ -64,9 +64,9 @@ export const GROUPS: Group[] = [
       {
         id: 'heading3',
         name: 'heading3',
-        label: 'Heading 3',
+        label: '제목 3',
         iconName: 'Heading3',
-        description: 'Low priority section title',
+        description: '낮은 우선순위 섹션 제목',
         aliases: ['h3'],
         action: editor => {
           editor.chain().focus().setHeading({ level: 3 }).run()
@@ -75,9 +75,9 @@ export const GROUPS: Group[] = [
       {
         id: 'bulletList',
         name: 'bulletList',
-        label: 'Bullet List',
+        label: '글머리 기호 목록',
         iconName: 'List',
-        description: 'Unordered list of items',
+        description: '순서가 없는 항목 목록',
         aliases: ['ul'],
         action: editor => {
           editor.chain().focus().toggleBulletList().run()
@@ -86,9 +86,9 @@ export const GROUPS: Group[] = [
       {
         id: 'numberedList',
         name: 'numberedList',
-        label: 'Numbered List',
+        label: '번호 목록',
         iconName: 'ListOrdered',
-        description: 'Ordered list of items',
+        description: '순서가 있는 항목 목록',
         aliases: ['ol'],
         action: editor => {
           editor.chain().focus().toggleOrderedList().run()
@@ -97,9 +97,9 @@ export const GROUPS: Group[] = [
       {
         id: 'taskList',
         name: 'taskList',
-        label: 'Task List',
+        label: '할일 목록',
         iconName: 'ListTodo',
-        description: 'Task list with todo items',
+        description: '할일 항목이 있는 작업 목록',
         aliases: ['todo'],
         action: editor => {
           editor.chain().focus().toggleTaskList().run()
@@ -108,9 +108,9 @@ export const GROUPS: Group[] = [
       {
         id: 'blockquote',
         name: 'blockquote',
-        label: 'Blockquote',
+        label: '인용구',
         iconName: 'Quote',
-        description: 'Element for quoting',
+        description: '인용을 위한 요소',
         action: editor => {
           editor.chain().focus().setBlockquote().run()
         },
@@ -118,9 +118,9 @@ export const GROUPS: Group[] = [
       {
         id: 'codeBlock',
         name: 'codeBlock',
-        label: 'Code Block',
+        label: '코드 블록',
         iconName: 'SquareCode',
-        description: 'Code block with syntax highlighting',
+        description: '구문 강조가 있는 코드 블록',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => {
           editor.chain().focus().setCodeBlock().run()
@@ -130,14 +130,14 @@ export const GROUPS: Group[] = [
   },
   {
     name: 'insert',
-    title: 'Insert',
+    title: '삽입',
     commands: [
       {
         id: 'table',
         name: 'table',
-        label: 'Table',
+        label: '표',
         iconName: 'Table',
-        description: 'Insert a table',
+        description: '표를 삽입합니다',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => {
           editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: false }).run()
@@ -146,9 +146,9 @@ export const GROUPS: Group[] = [
       {
         id: 'image',
         name: 'image',
-        label: 'Image',
+        label: '이미지',
         iconName: 'Image',
-        description: 'Insert an image',
+        description: '이미지를 삽입합니다',
         aliases: ['img'],
         action: editor => {
           editor.chain().focus().setImageUpload().run()
@@ -157,9 +157,9 @@ export const GROUPS: Group[] = [
       {
         id: 'columns',
         name: 'columns',
-        label: 'Columns',
+        label: '열',
         iconName: 'Columns2',
-        description: 'Add two column content',
+        description: '두 개의 열 콘텐츠를 추가합니다',
         aliases: ['cols'],
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => {
@@ -174,9 +174,9 @@ export const GROUPS: Group[] = [
       {
         id: 'horizontalRule',
         name: 'horizontalRule',
-        label: 'Horizontal Rule',
+        label: '수평선',
         iconName: 'Minus',
-        description: 'Insert a horizontal divider',
+        description: '수평 구분선을 삽입합니다',
         aliases: ['hr'],
         action: editor => {
           editor.chain().focus().setHorizontalRule().run()
@@ -185,13 +185,28 @@ export const GROUPS: Group[] = [
       {
         id: 'toc',
         name: 'toc',
-        label: 'Table of Contents',
+        label: '목차',
         iconName: 'Book',
         aliases: ['outline'],
-        description: 'Insert a table of contents',
+        description: '목차를 삽입합니다',
         shouldBeHidden: editor => editor.isActive('columns'),
         action: editor => {
           editor.chain().focus().insertTableOfContents().run()
+        },
+      },
+      {
+        id: 'youtube',
+        name: 'youtube',
+        label: 'YouTube 비디오',
+        iconName: 'Play',
+        description: 'YouTube 비디오를 삽입합니다',
+        aliases: ['video', 'youtube'],
+        shouldBeHidden: editor => editor.isActive('columns'),
+        action: editor => {
+          const url = prompt('YouTube URL을 입력하세요:')
+          if (url) {
+            editor.chain().focus().setYouTubeVideo({ src: url }).run()
+          }
         },
       },
     ],

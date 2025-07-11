@@ -8,7 +8,7 @@
     ]"
     @click="onClick"
   >
-    <div class="flex items-center justify-center w-10 h-10 border rounded-md shrink-0 border-neutral-200 dark:border-neutral-800">
+    <div class="flex items-center justify-center w-10 h-10 rounded-md shrink-0">
       <Icon :name="icon" class="w-6 h-6" />
     </div>
     <div class="ml-2">
@@ -34,6 +34,7 @@ defineProps<Props>()
 const emit = defineEmits(['click'])
 
 const onClick = () => {
+  console.log('CommandButton clicked!')
   emit('click')
 }
-</script> 
+</script>

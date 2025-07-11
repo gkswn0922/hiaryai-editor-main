@@ -40,6 +40,7 @@ import {
   TrailingNode,
   Typography,
   Underline,
+  YouTube,
 } from '.'
 import { ImageUpload } from './ImageUpload'
 import { TableOfContentsNode } from './TableOfContentsNode'
@@ -48,6 +49,7 @@ import { CollaborationCursor } from '@tiptap/extension-collaboration-cursor'
 import { Doc as YDoc } from 'yjs'
 import { HocuspocusProvider } from '@hocuspocus/provider'
 import { Emoji } from '@tiptap-pro/extension-emoji'
+import { emojiSuggestion } from './EmojiSuggestion'
 
 const AiExtension = Extension.create({
   name: 'ai',
@@ -100,9 +102,16 @@ export const ExtensionKit = ({ provider, userId, userName = 'Maxi', ydoc }: Exte
       history: false,
       codeBlock: false,
     }),
+    History.configure({
+      depth: 100,
+      newGroupDelay: 500,
+    }),
     CodeBlockLowlight.configure({
       lowlight,
       defaultLanguage: null,
+      HTMLAttributes: {
+        class: 'code-block-wrapper',
+      },
     }),
     TextStyle,
     FontSize,
@@ -148,7 +157,10 @@ export const ExtensionKit = ({ provider, userId, userName = 'Maxi', ydoc }: Exte
       width: 2,
       class: 'ProseMirror-dropcursor border-black',
     }),
-    Emoji,
+    Emoji.configure({
+      suggestion: emojiSuggestion,
+    }),
+    YouTube,
   ]
 
   if (provider && ydoc) {

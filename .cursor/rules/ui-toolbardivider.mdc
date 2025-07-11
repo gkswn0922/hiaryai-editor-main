@@ -3,3 +3,13 @@ description:
 globs:
 alwaysApply: false
 ---
+# ToolbarDivider Component Rule
+
+The [ToolbarDivider.vue](mdc:src/components/ui/ToolbarDivider.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for visually separating groups of toolbar actions.
+- Accepts `horizontal` prop to control orientation (default: vertical divider).
+- Uses Tailwind CSS for styling and utility classes.
+
+For toolbar best practices, see the [shadcn-vue Toolbar documentation](https://www.shadcn-vue.com/docs/components/toolbar) as a reference.

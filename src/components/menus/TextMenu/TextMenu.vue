@@ -6,7 +6,7 @@
     :should-show="states.shouldShow"
     :update-delay="100"
   >
-    <Toolbar>
+    <Toolbar class="min-w-[600px]">
       <!-- <AIDropdown
         @complete-sentence="commands.onCompleteSentence"
         @emojify="commands.onEmojify"
@@ -23,22 +23,22 @@
       <FontFamilyPicker @change="commands.onSetFont" :value="states.currentFont.value || ''" />
       <FontSizePicker @change="commands.onSetFontSize" :value="states.currentSize.value || ''" />
       <ToolbarDivider />
-      <ToolbarButton tooltip="Bold" :tooltip-shortcut="['Mod', 'B']" @click="commands.onBold" :is-active="states.isBold.value">
+      <ToolbarButton tooltip="굵게" :tooltip-shortcut="['Mod', 'B']" @click="commands.onBold" :is-active="states.isBold.value">
         <Icon name="Bold" />
       </ToolbarButton>
-      <ToolbarButton tooltip="Italic" :tooltip-shortcut="['Mod', 'I']" @click="commands.onItalic" :is-active="states.isItalic.value">
+      <ToolbarButton tooltip="기울임" :tooltip-shortcut="['Mod', 'I']" @click="commands.onItalic" :is-active="states.isItalic.value">
         <Icon name="Italic" />
       </ToolbarButton>
-      <ToolbarButton tooltip="Underline" :tooltip-shortcut="['Mod', 'U']" @click="commands.onUnderline" :is-active="states.isUnderline.value">
+      <ToolbarButton tooltip="밑줄" :tooltip-shortcut="['Mod', 'U']" @click="commands.onUnderline" :is-active="states.isUnderline.value">
         <Icon name="Underline" />
       </ToolbarButton>
-      <ToolbarButton tooltip="Strikehrough" :tooltip-shortcut="['Mod', 'Shift', 'S']" @click="commands.onStrike" :is-active="states.isStrike.value">
+      <ToolbarButton tooltip="취소선" :tooltip-shortcut="['Mod', 'Shift', 'S']" @click="commands.onStrike" :is-active="states.isStrike.value">
         <Icon name="Strikethrough" />
       </ToolbarButton>
-      <ToolbarButton tooltip="Code" :tooltip-shortcut="['Mod', 'E']" @click="commands.onCode" :is-active="states.isCode.value">
+      <ToolbarButton tooltip="코드" :tooltip-shortcut="['Mod', 'E']" @click="commands.onCode" :is-active="states.isCode.value">
         <Icon name="Code" />
       </ToolbarButton>
-      <ToolbarButton tooltip="Code block" @click="commands.onCodeBlock">
+      <ToolbarButton tooltip="코드 블록" @click="commands.onCodeBlock">
         <Icon name="CodeXml" />
       </ToolbarButton>
       <EditLinkPopover @set-link="commands.onLink" />
@@ -138,4 +138,4 @@ const props = defineProps<TextMenuProps>()
 const commands = useTextmenuCommands(props.editor)
 const states = useTextmenuStates(props.editor)
 const blockOptions = useTextmenuContentTypes(props.editor)
-</script> 
+</script>

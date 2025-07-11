@@ -61,6 +61,7 @@ export const SlashCommand = Extension.create({
           )
         },
         command: ({ editor, props }: { editor: Editor; props: any }) => {
+          console.log('SlashCommand command called with props:', props);
           const { view, state } = editor
           const { $head, $from } = view.state.selection
 
@@ -72,6 +73,7 @@ export const SlashCommand = Extension.create({
           const tr = state.tr.deleteRange(from, end)
           view.dispatch(tr)
 
+          console.log('Executing action:', props.action);
           props.action(editor)
           view.focus()
         },
