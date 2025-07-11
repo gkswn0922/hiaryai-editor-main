@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Tooltip Component Rule
+
+The [Tooltip.vue](mdc:src/components/ui/Tooltip.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for displaying contextual information on hover or focus.
+- Accepts `enabled`, `title`, `shortcut`, and `tippyOptions` props.
+- Uses [vue-tippy](mdc:https:/kabbouchi.github.io/vue-tippy) for tooltip rendering and positioning.
+- Supports keyboard shortcut display with custom rendering for Mac/Windows keys.
+- Uses Tailwind CSS for styling and utility classes.
+
+For tooltip best practices, see the [shadcn-vue Tooltip documentation](mdc:https:/www.shadcn-vue.com/docs/components/tooltip) as a reference.
+
+
+
+
+

@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Toggle Component Rule
+
+The [Toggle.vue](mdc:src/components/ui/Toggle.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for toggling between on/off states (switch UI).
+- Accepts `active` (boolean, default: false) and `size` (`small` | `large`, default: `large`) props.
+- Emits a `change` event when toggled.
+- Uses Tailwind CSS for styling and utility classes.
+- Accessible: uses `role="switch"` and `aria-checked` attributes.
+
+For toggle best practices, see the [shadcn-vue Switch documentation](mdc:https:/www.shadcn-vue.com/docs/components/switch) as a reference.
+
+
+
+
+

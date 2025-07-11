@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Spinner Component Rule
+
+The [Spinner.vue](mdc:src/components/ui/Spinner.vue) component follows shadcn-vue conventions:
+
+- It is a single file component (SFC) in the `src/components/ui` directory.
+- Used for displaying a spinning loading indicator.
+- Uses Tailwind CSS for styling and utility classes.
+- Accepts an optional `class` prop for custom styling.
+- The spinner is a `div` with animated spin and border styles.
+
+For loading indicator best practices, see the [shadcn-vue Skeleton documentation](mdc:https:/www.shadcn-vue.com/docs/components/skeleton) as a reference.
+
+
+
+
+
+<!--  -->

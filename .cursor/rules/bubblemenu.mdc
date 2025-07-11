@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# BubbleMenu Components Rule
+
+The [index.vue](mdc:src/components/BubbleMenu/index.vue), [ColorSelector.vue](mdc:src/components/BubbleMenu/ColorSelector.vue), [LinkSelector.vue](mdc:src/components/BubbleMenu/LinkSelector.vue), and [NodeSelector.vue](mdc:src/components/BubbleMenu/NodeSelector.vue) components follow shadcn-vue conventions:
+
+- Each is a single file component (SFC) in the `src/components/BubbleMenu` directory.
+- Used for contextual editing menus and selectors.
+- Uses Tailwind CSS for styling and utility classes.
+
+For contextual menu best practices, see the [shadcn-vue Dropdown Menu documentation](mdc:https:/www.shadcn-vue.com/docs/components/dropdown-menu).
+
+
+

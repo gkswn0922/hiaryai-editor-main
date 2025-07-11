@@ -1,0 +1,8 @@
+{
+  "root": true,
+  "ignorePatterns": [".ref"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/vue3-essential"
+  ]
+} 

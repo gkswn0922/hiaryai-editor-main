@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Loader Component Rule
+
+The [Loader.vue](mdc:src/components/ui/Loader/Loader.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui/Loader`.
+- Used for displaying a loading overlay or inline loader.
+- Accepts `hasOverlay` (default: true) to show a fullscreen overlay, and `label` for optional loading text.
+- Uses Tailwind CSS for styling and utility classes.
+- Uses a spinning SVG as the loading indicator.
+- Uses Vue's `<Teleport>` for overlay rendering to `body`.
+
+For loading indicator best practices, see the [shadcn-vue Skeleton documentation](mdc:https:/www.shadcn-vue.com/docs/components/skeleton) as a reference.
+
+
+
+
+

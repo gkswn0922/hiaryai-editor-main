@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# BlockEditor Subcomponents Rule
+
+The [EditorHeader.vue](mdc:src/components/BlockEditor/components/EditorHeader.vue) and [EditorInfo.vue](mdc:src/components/BlockEditor/components/EditorInfo.vue) components follow shadcn-vue conventions:
+
+- Each is a single file component (SFC) in the `src/components/BlockEditor/components` directory.
+- Used as subcomponents for the BlockEditor, providing header and info UI.
+- Uses Tailwind CSS for styling and utility classes.
+
+For subcomponent best practices, see the [shadcn-vue Card documentation](mdc:https:/www.shadcn-vue.com/docs/components/card) as a reference for splitting UI into logical parts.
+
+
+

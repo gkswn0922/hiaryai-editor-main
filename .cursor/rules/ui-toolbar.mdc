@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Toolbar Component Rule
+
+The [Toolbar.vue](mdc:src/components/ui/Toolbar.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for grouping and displaying toolbar actions horizontally or vertically.
+- Accepts `shouldShowContent` (default: true) and `isVertical` (default: false) props.
+- Uses Tailwind CSS for styling and utility classes.
+- Wraps content in a [Surface.vue](mdc:src/components/ui/Surface.vue) for consistent background and border.
+
+For toolbar best practices, see the [shadcn-vue Toolbar documentation](mdc:https:/www.shadcn-vue.com/docs/components/toolbar) as a reference.
+
+
+
+
+

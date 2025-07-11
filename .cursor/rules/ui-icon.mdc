@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Icon Component Rule
+
+The [Icon.vue](mdc:src/components/ui/Icon.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for rendering SVG icons from the `lucide-vue-next` icon set.
+- Accepts `name` (icon name), `className` (for custom classes), and `strokeWidth` props.
+- Uses Tailwind CSS for sizing and utility classes.
+- Dynamically renders the icon component based on the `name` prop.
+
+For icon best practices, see the [shadcn-vue Icon documentation](mdc:https:/www.shadcn-vue.com/docs/components/icon) as a reference.
+
+

@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# LinkMenu Component Rule
+
+The [LinkMenu.vue](mdc:src/components/menus/LinkMenu/LinkMenu.vue) component follows shadcn-vue conventions:
+
+- It is a single file component (SFC) in the `src/components/menus/LinkMenu` directory.
+- Uses Radix Vue primitives for menu logic and accessibility.
+- Uses Tailwind CSS for styling and utility classes.
+- Handles link-related actions and UI in a modular way.
+
+For menu and popover best practices, see the [shadcn-vue Dropdown Menu documentation](mdc:https:/www.shadcn-vue.com/docs/components/dropdown-menu).
+
+
+

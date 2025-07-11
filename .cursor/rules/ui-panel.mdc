@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Panel Component Rule
+
+The [Panel.vue](mdc:src/components/ui/Panel/Panel.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui/Panel`.
+- Used for displaying content within a styled panel container.
+- Accepts `spacing` (`medium` | `small`), `noShadow`, `asChild`, and `class` props.
+- Uses Tailwind CSS for styling and utility classes.
+- Wraps content in a [Surface.vue](mdc:src/components/ui/Surface.vue) component for consistent background, border, and shadow.
+- Uses `Primitive` from radix-vue for polymorphic rendering.
+
+For container best practices, see the [shadcn-vue Card documentation](mdc:https:/www.shadcn-vue.com/docs/components/card) as a reference.
+
+
+
+
+

@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Colorpicker Components Rule
+
+The [ColorButton.vue](mdc:src/components/panels/Colorpicker/ColorButton.vue) and [ColorPicker.vue](mdc:src/components/panels/Colorpicker/ColorPicker.vue) components follow shadcn-vue conventions:
+
+- Each is a single file component (SFC) in the `src/components/panels/Colorpicker` directory.
+- Used for color selection UI in panels.
+- Uses Tailwind CSS for styling and utility classes.
+
+For color picker best practices, see the [shadcn-vue Input documentation](mdc:https:/www.shadcn-vue.com/docs/components/input) as a reference for input components.
+
+
+

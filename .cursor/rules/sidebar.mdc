@@ -1,0 +1,17 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Sidebar Component Rule
+
+The [Sidebar.vue](mdc:src/components/Sidebar/Sidebar.vue) component follows shadcn-vue conventions:
+
+- It is a single file component (SFC) in the `src/components/Sidebar` directory.
+- Used for navigation or contextual side panels.
+- Uses Tailwind CSS for styling and utility classes.
+
+For sidebar best practices, see the [shadcn-vue Sidebar documentation](mdc:https:/www.shadcn-vue.com/docs/components/sidebar) as a reference.
+
+
+

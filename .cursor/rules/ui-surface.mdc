@@ -1,0 +1,21 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Surface Component Rule
+
+The [Surface.vue](mdc:src/components/ui/Surface.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui`.
+- Used for providing a consistent background, border, and shadow for content containers.
+- Accepts `withShadow`, `withBorder`, and `class` props (all optional, default: true for shadow and border).
+- Uses Tailwind CSS for styling and utility classes.
+- Used as a base for other container components like Panel.
+
+For container best practices, see the [shadcn-vue Card documentation](mdc:https:/www.shadcn-vue.com/docs/components/card) as a reference.
+
+
+
+
+

@@ -1,0 +1,22 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Button Component Rule
+
+The [Button.vue](mdc:src/components/ui/Button/Button.vue) component follows shadcn-vue conventions:
+
+- Single File Component (SFC) in `src/components/ui/Button`.
+- Provides a flexible button with variants (`primary`, `secondary`, `tertiary`, `ghost`, `link`) and sizes (`default`, `sm`, `lg`, `icon`).
+- Uses [class-variance-authority](mdc:https:/cva.style/docs/integrations/vue) for variant management.
+- Accepts `as`, `variant`, `size`, `active`, and `activeClassname` props.
+- Uses Tailwind CSS for styling and utility classes.
+- Renders as a configurable HTML element via the `as` prop (default: `button`).
+- Follows accessibility and shadcn-vue best practices for button components.
+
+For usage and API, see the [shadcn-vue Button documentation](mdc:https:/www.shadcn-vue.com/docs/components/button).
+
+
+
+

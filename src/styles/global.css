@@ -1,0 +1,32 @@
+.tippy-content {
+  background-color: white;
+  color: black;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+  padding: 1px;
+  font-size: 14px;
+  min-width: 240px;       /* 가로 최소 크기 */
+  overflow: visible;      /* 내부 요소가 잘리지 않게 */
+}
+.bubble-menu {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* 버튼 사이 여백 */
+}
+
+.draggable-block {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+}
+
+.drag-handle {
+  cursor: grab;
+  user-select: none;
+  margin-right: 8px;
+  font-size: 16px;
+  color: #999;
+}
+.drag-handle:active {
+  cursor: grabbing;
+}

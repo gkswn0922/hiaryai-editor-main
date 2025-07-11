@@ -1,0 +1,19 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# TextMenu Component Rule
+
+The [TextMenu.vue](mdc:src/components/menus/TextMenu/TextMenu.vue) component and its subcomponents in [components/](mdc:src/components/menus/TextMenu/components) follow shadcn-vue conventions:
+
+- `TextMenu.vue` is the main menu component, with subcomponents (e.g., AIDropdown, ContentTypePicker, EditLinkPopover, FontFamilyPicker, FontSizePicker) in the `components` directory.
+- Each subcomponent is a single file component (SFC).
+- Uses Radix Vue primitives for menu logic and accessibility where appropriate.
+- Uses Tailwind CSS for styling and utility classes.
+- Exports should be managed via an `index.ts` if there are multiple related files.
+
+For menu and popover best practices, see the [shadcn-vue Dropdown Menu documentation](mdc:https:/www.shadcn-vue.com/docs/components/dropdown-menu).
+
+
+
