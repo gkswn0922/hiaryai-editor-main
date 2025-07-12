@@ -9,6 +9,7 @@
         :words="characterCount.words()"
         :is-sidebar-open="leftSidebar.isOpen.value"
         @toggle-sidebar="leftSidebar.toggle"
+        @save="handleSave"
       />
       <EditorContent :editor="editor" ref="editorRef" class="flex-1 overflow-y-auto" />
       <ContentItemMenu :editor="editor" />
@@ -43,9 +44,19 @@ const aiState = useAIState()
 const menuContainerRef = ref<HTMLDivElement | null>(null)
 const editorRef = ref()
 
-const { editor, users, characterCount, collabState, leftSidebar } = useBlockEditor(props)
+const { editor, users, characterCount, collabState, leftSidebar, saveContent } = useBlockEditor(props)
 
 const displayedUsers = computed(() => users.value.slice(0, 3))
+
+// 저장 임시 구현
+const handleSave = async () => {
+  const result = await saveContent()
+  if (result?.success) {
+    console.log('JSON POST SUCCESS')
+  } else {
+    console.error('JSON POST FAILED:', result?.error)
+  }
+}
 
 // 키보드 단축키 설정
 useKeyboardShortcuts(editor.value || null)

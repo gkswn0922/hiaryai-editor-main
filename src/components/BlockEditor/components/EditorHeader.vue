@@ -12,7 +12,15 @@
         </ToolbarButton>
       </div>
     </div>
-    <EditorInfo :characters="characters" :words="words" :collab-state="collabState" :users="users" />
+    <div class="flex items-center gap-3">
+      <button
+        @click="$emit('save')"
+        class="px-3 py-1.5 bg-blue-500 text-white text-sm rounded hover:bg-blue-600 transition-colors"
+      >
+        저장
+      </button>
+      <EditorInfo :characters="characters" :words="words" :collab-state="collabState" :users="users" />
+    </div>
   </div>
 </template>
 
@@ -32,5 +40,5 @@ export type EditorHeaderProps = {
 }
 
 defineProps<EditorHeaderProps>()
-const emit = defineEmits(['toggleSidebar'])
+const emit = defineEmits(['toggleSidebar', 'save'])
 </script>
